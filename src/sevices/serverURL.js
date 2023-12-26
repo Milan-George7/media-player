@@ -1,1 +1,1 @@
-export const SERVER_URL = "https://media-server-gdpy.onrender.com/"
+export const SERVER_URL = "https://media-server-gdpy.onrender.com"
