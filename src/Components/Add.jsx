@@ -3,7 +3,7 @@ import { Button, Modal, Form, FloatingLabel } from 'react-bootstrap'
 import { uploadNewVideoAPI } from '../sevices/allAPI';
 
 
-function Add() {
+function Add({setUploadVideoResponse}) {
   const [uploadVideo,setUploadVideo] = useState({
     id:"",caption:"",url:"",link:""
   })
@@ -43,6 +43,8 @@ function Add() {
         setUploadVideo({
           id:"",caption:"",url:"",link:""
         })
+        //share result.data to view component 'state lifting'
+        setUploadVideoResponse(result.data)
       }else{
         alert(result.message)
       }
